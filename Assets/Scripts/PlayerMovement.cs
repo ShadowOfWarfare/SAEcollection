@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     private CharacterController controller;
     Vector3 moveDir;
+    Vector3 rot;
 
     void Start()
     {
@@ -27,12 +28,14 @@ public class PlayerMovement : MonoBehaviour
         if (controller.isGrounded)
         {
             //move along forward/back and left/right.
-            moveDir = new Vector3(0, 0, Input.GetAxis("Vertical"));
-            moveDir = transform.TransformDirection(moveDir);
+            moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            //moveDir = transform.TransformDirection(moveDir);  
             moveDir *= speed;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(moveDir), 0.15f);
+            
         }
         //rotation code
-        transform.Rotate(0,Input.GetAxis("Horizontal") * rotSpeed * Time.deltaTime,0);
+        //transform.Rotate(0,Input.GetAxis("Rotate") * rotSpeed * Time.deltaTime,0);
         //Apply gravity
         moveDir.y -= gravity * Time.deltaTime;
         //move character
