@@ -31,7 +31,8 @@ public class PlayerMovement : MonoBehaviour
             moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             //moveDir = transform.TransformDirection(moveDir);  
             moveDir *= speed;
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(moveDir), 0.15f);
+            if((Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0))
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(moveDir), 0.15f);
             
         }
         //rotation code
