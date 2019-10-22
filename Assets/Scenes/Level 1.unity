@@ -4210,7 +4210,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh13454
+  m_Name: pb_Mesh13446
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7365,7 +7365,7 @@ MonoBehaviour:
   dontDestroyMeshOnDelete: 0
   m_selectedFaces: 
   m_SelectedEdges: []
-  m_selectedTriangles: 
+  m_selectedTriangles: 0000000032000000
 --- !u!114 &861853593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7701,7 +7701,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh13368
+  m_Name: pb_Mesh13380
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12813,6 +12813,7 @@ GameObject:
   - component: {fileID: 2107533580}
   - component: {fileID: 2107533579}
   - component: {fileID: 2107533582}
+  - component: {fileID: 2107533583}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -12879,7 +12880,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2107533578}
   m_LocalRotation: {x: -0.481984, y: -0.0059516793, z: -0.0038928445, w: -0.87615126}
-  m_LocalPosition: {x: 322, y: 445, z: 785}
+  m_LocalPosition: {x: 322, y: 427, z: 785}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12900,7 +12901,21 @@ MonoBehaviour:
   startingPosition: {x: 0, y: 0, z: 0}
   newPosition: {x: 0, y: 0, z: 0}
   distBetweenPlayers: 0
-  maxHeight: 722
+  maxHeight: 709
+  panSpeed: 3
+--- !u!114 &2107533583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107533578}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28a3f9e1f94cf1e47a6f0662303540e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHeight: 709
   panSpeed: 3
 --- !u!1 &2131175151
 GameObject:
