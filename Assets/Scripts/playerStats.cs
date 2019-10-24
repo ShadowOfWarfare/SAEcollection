@@ -5,6 +5,8 @@ using UnityEngine;
 public class playerStats : MonoBehaviour
 {
     public float health;
+    public float attack;
+    public float armour;
 
 
     // Start is called before the first frame update
