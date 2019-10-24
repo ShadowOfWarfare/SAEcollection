@@ -21,9 +21,10 @@ public class Spawner : MonoBehaviour
     
     IEnumerator waitTime()
     {
-        yield return new WaitForSeconds(3f);
+        
         if (picked == true)
         {
+            yield return new WaitForSeconds(3f);
             Instantiate(pickup, transform.position, transform.rotation);
         }
     }

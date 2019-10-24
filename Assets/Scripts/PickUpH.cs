@@ -13,17 +13,18 @@ public class PickUpH : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        spawn = spawn.GetComponent<Spawner>();
+        spawn = GetComponent<Spawner>();
         //if the player health is less than 100, the player will be able to pick it up.
         if (col.gameObject.tag == "Player 1")
         {
             GameObject player = col.gameObject;
             if (player.GetComponent<playerStats>().health < 100)
             {
-                player.GetComponent<Spawner>().picked = true;
+                
                 Debug.Log("picked up");
                 player.GetComponent<playerStats>().health += 30f;
                 des();
+                spawn.picked = true;
             }
 
 
@@ -32,9 +33,8 @@ public class PickUpH : MonoBehaviour
                 Debug.Log("health is full");
             }
 
-            
         }
-        
+
     }
 
 
