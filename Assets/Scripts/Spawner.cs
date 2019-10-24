@@ -12,16 +12,14 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         Instantiate(pickup, transform.position, transform.rotation);
-       
-    }
-    
-    void Update()
-    {
-        if(picked == true)
-        StartCoroutine(pick());
     }
 
-    IEnumerator pick()
+    void Update()
+    {
+        StartCoroutine(waitTime());
+    }  
+    
+    IEnumerator waitTime()
     {
         yield return new WaitForSeconds(3f);
         if (picked == true)
@@ -29,6 +27,4 @@ public class Spawner : MonoBehaviour
             Instantiate(pickup, transform.position, transform.rotation);
         }
     }
-
-   
 }
