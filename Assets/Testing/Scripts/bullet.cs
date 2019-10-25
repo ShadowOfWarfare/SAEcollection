@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
+    //code done by Jesse
     public float bulletSpeed;
     public float despawnTime;
     // Update is called once per frame

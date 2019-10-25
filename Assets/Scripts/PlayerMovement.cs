@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    //code done by Rohith
     // Start is called before the first frame update
     //how fast we move
     public float speed = 10f;
@@ -35,8 +36,6 @@ public class PlayerMovement : MonoBehaviour
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(moveDir), 0.15f);
             
         }
-        //rotation code
-        //transform.Rotate(0,Input.GetAxis("Rotate") * rotSpeed * Time.deltaTime,0);
         //Apply gravity
         moveDir.y -= gravity * Time.deltaTime;
         //move character

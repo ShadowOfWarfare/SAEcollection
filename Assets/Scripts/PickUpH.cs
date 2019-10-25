@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PickUpH : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Code done by Rohith Maddali
 
     public float health = 30f;
     public bool picked = false;
@@ -15,9 +15,10 @@ public class PickUpH : MonoBehaviour
     {
         
         //if the player health is less than 100, the player will be able to pick it up.
-        if (col.gameObject.tag == "Player 1")
+        if (col.gameObject.tag == "Player 1" || col.gameObject.tag == "Player 2")
         {
             GameObject player = col.gameObject;
+            //checks if the player is eligible for pick up
             if (player.GetComponent<playerStats>().health < 100)
             {
                 
@@ -40,6 +41,7 @@ public class PickUpH : MonoBehaviour
 
     void des()
     {
+        //destroys the game object once its picked up.
         Destroy(gameObject);        
     }
         

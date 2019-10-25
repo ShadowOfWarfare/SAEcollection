@@ -7,6 +7,16 @@ public class playerStats : MonoBehaviour
     public float health;
     public float attack;
     public float armour;
+    public int curAmmo;
+    public int maxAmmo;
+
+    public enum weapons
+    {
+        def,
+        shotgun,
+        sniper,
+        rifle
+    }
 
 
     // Start is called before the first frame update

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
+    //code done by Trent
     // Start is called before the first frame update
     //values
     [SerializeField]

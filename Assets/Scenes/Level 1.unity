@@ -3918,6 +3918,8 @@ MonoBehaviour:
   health: 10
   attack: 50
   armour: 2
+  curAmmo: 0
+  maxAmmo: 0
 --- !u!1 &479052494
 GameObject:
   m_ObjectHideFlags: 0
@@ -8037,6 +8039,36 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &996657039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 996657040}
+  m_Layer: 0
+  m_Name: AmmoPickUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &996657040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996657039}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 154.57, y: 369.3, z: 1069.95}
+  m_LocalScale: {x: 4.9786315, y: 4.9786315, z: 4.9786315}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1100418381
 GameObject:
   m_ObjectHideFlags: 0
@@ -12025,7 +12057,7 @@ GameObject:
   - component: {fileID: 1732591081}
   m_Layer: 0
   m_Name: HealthPickUp
-  m_TagString: pickUp
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12044,6 +12076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickup: {fileID: 584570917914415542, guid: 485b0c6ac955ff745842aa151296bd00, type: 3}
   picked: 0
+  timer: 5
 --- !u!4 &1732591082
 Transform:
   m_ObjectHideFlags: 0
