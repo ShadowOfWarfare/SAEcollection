@@ -7,11 +7,14 @@ public class Spawner : MonoBehaviour
     
     public GameObject pickup;
     public bool picked = false;
+    
 
     // Update is called once per frame
     void Start()
     {
-        Instantiate(pickup, transform.position, transform.rotation);
+        GameObject P = Instantiate(pickup, transform.position, transform.rotation);
+        P.GetComponent<PickUpH>().spawn = this;
+
     }
 
     void Update()
@@ -24,8 +27,11 @@ public class Spawner : MonoBehaviour
         
         if (picked == true)
         {
+            picked = false;
             yield return new WaitForSeconds(3f);
-            Instantiate(pickup, transform.position, transform.rotation);
+            GameObject P = Instantiate(pickup, transform.position, transform.rotation);
+            P.GetComponent<PickUpH>().spawn = this;
+            
         }
     }
 }

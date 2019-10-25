@@ -8,12 +8,12 @@ public class PickUpH : MonoBehaviour
 
     public float health = 30f;
     public bool picked = false;
-    Spawner spawn;
+    public Spawner spawn;
     
 
     void OnTriggerEnter(Collider col)
     {
-        spawn = GetComponent<Spawner>();
+        
         //if the player health is less than 100, the player will be able to pick it up.
         if (col.gameObject.tag == "Player 1")
         {
