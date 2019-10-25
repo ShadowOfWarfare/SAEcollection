@@ -107,4 +107,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   awSpawner: {fileID: 0}
   picked: 0
-  ammoCount: 15
+  ammoCount: 5

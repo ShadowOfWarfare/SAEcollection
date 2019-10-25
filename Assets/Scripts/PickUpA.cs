@@ -20,12 +20,13 @@ public class PickUpA : MonoBehaviour
             //checks if player is eligible to pick up the ammo block.
             if(player.GetComponent<playerStats>().curAmmo < player.GetComponent<playerStats>().maxAmmo)
             {
+                awSpawner.count += 1;
+                awSpawner.picked = true;
                 player.GetComponent<playerStats>().curAmmo += ammoCount;
                 //checks if the player is picking up more than the max ammo that he can store in that weapon.
                 if(player.GetComponent<playerStats>().curAmmo > player.GetComponent<playerStats>().maxAmmo)
                 player.GetComponent<playerStats>().curAmmo = player.GetComponent<playerStats>().maxAmmo;
                 des();
-                awSpawner.picked = true;
             }
             else
             {

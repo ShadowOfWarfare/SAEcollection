@@ -18,7 +18,7 @@ public class AWSpawner : MonoBehaviour
     {
         GameObject A = Instantiate(ammo, transform.position, transform.rotation);
         A.GetComponent<PickUpA>().awSpawner = this;
-        count++;
+        
     }
 
     // Update is called once per frame
@@ -31,21 +31,24 @@ public class AWSpawner : MonoBehaviour
     {
         if(picked == true)
         {
-            picked = false;
+
+            
             yield return new WaitForSeconds(timer);
             if (count == 5 && picked == true)
             {
+                picked = false;
                 int W = Random.Range(0, weapon.Count);
                 GameObject A = Instantiate(weapon[W], transform.position, transform.rotation);
-                A.GetComponent<PickUpA>().awSpawner = this;
+                
                 //resets the countdown for weapon spawn.
                 count = 0;
             }
-            else if (count < 5 && picked == true)
+            if (count < 5 && picked == true)
             {
+                picked = false;
                 GameObject A = Instantiate(ammo, transform.position, transform.rotation);
                 A.GetComponent<PickUpA>().awSpawner = this;
-                count++;
+                
             }
         }
     }
