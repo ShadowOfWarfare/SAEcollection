@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PickUpA : MonoBehaviour
 {
-    public AWSpawner awSpawner;
+    public ASpawner aSpawner;
     public bool picked = false;
 
 
@@ -20,12 +20,14 @@ public class PickUpA : MonoBehaviour
             //checks if player is eligible to pick up the ammo block.
             if(player.GetComponent<playerStats>().curAmmo < player.GetComponent<playerStats>().maxAmmo)
             {
-                awSpawner.count += 1;
-                awSpawner.picked = true;
+                
+                aSpawner.picked = true;
                 player.GetComponent<playerStats>().curAmmo += ammoCount;
                 //checks if the player is picking up more than the max ammo that he can store in that weapon.
-                if(player.GetComponent<playerStats>().curAmmo > player.GetComponent<playerStats>().maxAmmo)
-                player.GetComponent<playerStats>().curAmmo = player.GetComponent<playerStats>().maxAmmo;
+                if (player.GetComponent<playerStats>().curAmmo > player.GetComponent<playerStats>().maxAmmo)
+                {
+                    player.GetComponent<playerStats>().curAmmo = player.GetComponent<playerStats>().maxAmmo;
+                }
                 des();
             }
             else

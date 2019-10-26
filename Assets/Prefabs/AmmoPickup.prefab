@@ -105,6 +105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f91f925694a9f44792f05e757255829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  awSpawner: {fileID: 0}
+  aSpawner: {fileID: 0}
   picked: 0
-  ammoCount: 5
+  ammoCount: 30
