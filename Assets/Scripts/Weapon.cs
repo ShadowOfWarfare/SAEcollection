@@ -13,12 +13,14 @@ public class Weapon : MonoBehaviour
     void Start()
     {
         GameObject S = Instantiate(Spawn, transform.position, transform.rotation);
+        S.transform.parent = transform;
     }
 
     // Update is called once per frame
     public void spawnUpdate()
     {
         GameObject W = Instantiate(spawn.newSpawn, transform.position, transform.rotation);
+        W.transform.parent = transform;
         
     }
     

@@ -8,6 +8,7 @@ public class WeaponSpawner : MonoBehaviour
     public Weapon w;
     public bool picked = false;
     public int timer;
+
     
     public GameObject newSpawn; 
 
@@ -15,12 +16,13 @@ public class WeaponSpawner : MonoBehaviour
     {
         //spawns the initial weapon
         newSpawn = weapons[Random.Range(0, weapons.Count)];
-        Instantiate(newSpawn, transform.position, transform.rotation);
+        Instantiate(weapons[Random.Range(0, weapons.Count)], transform.position, transform.rotation);
         Debug.Log("spawned");
     }
 
     private void OnTriggerEnter(Collider col)
     {
+        picked = true;
         //destroys the current held gun
         Destroy(w.gameObject);
         //spawns the new gun
