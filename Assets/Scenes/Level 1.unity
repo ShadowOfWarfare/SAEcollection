@@ -10980,7 +10980,7 @@ MonoBehaviour:
   Spawn:
   - {fileID: 7312538829609543031, guid: d1b9eaea7830cc64199092f1dc136ed3, type: 3}
   - {fileID: 5139520921217413244, guid: 830e5f84f58764845b0427ebf04bdd34, type: 3}
-  - {fileID: -927199367670048503, guid: d52be920f33cfb046a57d6c693c2b9ad, type: 3}
+  - {fileID: 1036317757482698358, guid: 3003ce1478a54f34d8b8656d3704d81b, type: 3}
   WE: {fileID: 0}
   weaponTF: {fileID: 1608926628}
 --- !u!43 &1613958443

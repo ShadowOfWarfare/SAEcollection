@@ -18,7 +18,7 @@ public class PickWeapon : MonoBehaviour
             Debug.Log("picked up!");
             //if (W != null)
             //{
-                E.picked = true;
+            E.picked = true;
                 W.spawnUpdate();
                 Destroy(gameObject);
             //}
