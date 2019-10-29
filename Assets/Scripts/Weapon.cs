@@ -7,6 +7,8 @@ public class Weapon : MonoBehaviour
     public List<GameObject> Spawn;
 
     public Wspawner WE;
+
+    public Transform weaponTF;
     
 
 
@@ -24,7 +26,7 @@ public class Weapon : MonoBehaviour
     {
         Destroy(transform.GetChild(0).gameObject);
 
-        GameObject S = Instantiate(Spawn[1], transform.position, transform.rotation);
+        GameObject S = Instantiate(Spawn[1], weaponTF.position, weaponTF.rotation);
         //S.GetComponent<PickWeapon>().W = this;
         S.transform.parent = transform;
     }
