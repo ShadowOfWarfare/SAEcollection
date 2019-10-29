@@ -16,7 +16,7 @@ public class Weapon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject S = Instantiate(Spawn[0], transform.position, transform.rotation);
+        GameObject S = Instantiate(Spawn[0],transform.position, transform.rotation);
        
         S.transform.parent = transform;
     }
@@ -26,7 +26,7 @@ public class Weapon : MonoBehaviour
     {
         Destroy(transform.GetChild(0).gameObject);
 
-        GameObject S = Instantiate(Spawn[1], weaponTF.position, weaponTF.rotation);
+        GameObject S = Instantiate(Spawn[2], weaponTF.position, weaponTF.rotation);
         //S.GetComponent<PickWeapon>().W = this;
         S.transform.parent = transform;
     }
