@@ -10177,7 +10177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1489836012}
-  - component: {fileID: 1489836013}
+  - component: {fileID: 1489836014}
   m_Layer: 0
   m_Name: WeaponPickUp
   m_TagString: Untagged
@@ -10199,7 +10199,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: -12.558001, z: 0}
---- !u!114 &1489836013
+--- !u!114 &1489836014
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10208,23 +10208,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1489836011}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3e8d666413b396428e0c28c9da5f573, type: 3}
+  m_Script: {fileID: 11500000, guid: d74cfcfc1488151419d01864ac417871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapons:
-  - {fileID: -927199367670048503, guid: cb1738228d8d1654e9f8938d653ff50b, type: 3}
-  - {fileID: -927199367670048503, guid: 4985f7d595204ed42b83a23d531dc3e5, type: 3}
-  w: {fileID: 0}
+  weapon: {fileID: 4108763109411511888, guid: 7ba3ee070d1e5204a8719d7e3f31ecfe, type: 3}
   picked: 0
-  timer: 10
-  newSpawn: {fileID: 0}
+  timer: 5
+  W: {fileID: 0}
 --- !u!43 &1549331595
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15182
+  m_Name: pb_Mesh13750
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10980,8 +10977,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 089e546d190c55443a95788af796abb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Spawn: {fileID: -927199367670048503, guid: cb1738228d8d1654e9f8938d653ff50b, type: 3}
-  spawn: {fileID: 0}
+  Spawn:
+  - {fileID: 7312538829609543031, guid: d1b9eaea7830cc64199092f1dc136ed3, type: 3}
+  - {fileID: 5713093163936417072, guid: c096c6f3b5c71734b9a471758019777b, type: 3}
+  WE: {fileID: 0}
 --- !u!43 &1613958443
 Mesh:
   m_ObjectHideFlags: 0
@@ -11151,7 +11150,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14878
+  m_Name: pb_Mesh13440
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

@@ -4,24 +4,29 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public GameObject Spawn;
+    public List<GameObject> Spawn;
 
-    public WeaponSpawner spawn;
+    public Wspawner WE;
+    
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        GameObject S = Instantiate(Spawn, transform.position, transform.rotation);
+        GameObject S = Instantiate(Spawn[0], transform.position, transform.rotation);
+       
         S.transform.parent = transform;
     }
 
     // Update is called once per frame
     public void spawnUpdate()
     {
-        GameObject W = Instantiate(spawn.newSpawn, transform.position, transform.rotation);
-        W.transform.parent = transform;
-        
+        Destroy(transform.GetChild(0).gameObject);
+
+        GameObject S = Instantiate(Spawn[1], transform.position, transform.rotation);
+        //S.GetComponent<PickWeapon>().W = this;
+        S.transform.parent = transform;
     }
     
     void Update()

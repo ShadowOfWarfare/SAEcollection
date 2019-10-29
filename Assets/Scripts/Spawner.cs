@@ -26,6 +26,7 @@ public class Spawner : MonoBehaviour
     
     IEnumerator waitTime()
     {
+
         
         //checks if there is an existing pick up.
         if (picked == true)
