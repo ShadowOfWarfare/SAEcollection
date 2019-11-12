@@ -38,5 +38,6 @@ public class CameraManager : MonoBehaviour
         newPosition = transform.position;
         newPosition.y = Mathf.Lerp(startingPosition.y, maxHeight, (distBetweenPlayers / maxHeight) * panSpeed );
         transform.position = new Vector3(transform.position.x, newPosition.y, transform.position.z);
+
     }
 }
