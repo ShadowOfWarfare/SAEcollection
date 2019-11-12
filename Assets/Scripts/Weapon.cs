@@ -9,6 +9,8 @@ public class Weapon : MonoBehaviour
     public Wspawner WE;
 
     public Transform weaponTF;
+
+    public int n = 0;
     
 
 
@@ -26,9 +28,20 @@ public class Weapon : MonoBehaviour
     {
         Destroy(transform.GetChild(0).gameObject);
 
-        GameObject S = Instantiate(Spawn[2], weaponTF.position, weaponTF.rotation);
-        //S.GetComponent<PickWeapon>().W = this;
-        S.transform.parent = transform;
+        if (n == 0)
+        {
+            GameObject S = Instantiate(Spawn[2], weaponTF.position, weaponTF.rotation);
+            //S.GetComponent<PickWeapon>().W = this;
+            S.transform.parent = transform;
+            n = 1;
+        }
+        else if(n == 1)
+        {
+            GameObject S = Instantiate(Spawn[1], weaponTF.position, weaponTF.rotation);
+            //S.GetComponent<PickWeapon>().W = this;
+            S.transform.parent = transform;
+            n = 0;
+        }
     }
     
     void Update()
