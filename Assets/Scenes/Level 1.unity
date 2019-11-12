@@ -3073,8 +3073,6 @@ GameObject:
   - component: {fileID: 2107533580}
   - component: {fileID: 2107533579}
   - component: {fileID: 2107533582}
-  - component: {fileID: 2107533584}
-  - component: {fileID: 2107533583}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3162,36 +3160,8 @@ MonoBehaviour:
   startingPosition: {x: 0, y: 0, z: 0}
   newPosition: {x: 0, y: 0, z: 0}
   distBetweenPlayers: 0
-  maxHeight: 1000.02
+  maxHeight: 750
   panSpeed: 3
---- !u!114 &2107533583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2107533578}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28a3f9e1f94cf1e47a6f0662303540e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHeight: 1000.02
-  panSpeed: 3
---- !u!114 &2107533584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2107533578}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc63036b2bfe8ff4384aac12c4a108b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player1: {fileID: 0}
-  Player2: {fileID: 0}
 --- !u!1 &2121248579
 GameObject:
   m_ObjectHideFlags: 0
