@@ -30,8 +30,9 @@ public class enemySpawner : MonoBehaviour
     {
         GameObject[] enemyList = GameObject.FindGameObjectsWithTag("Mutant");
         enemyCount = enemyList.Length;
+        Debug.Log(enemyCount);
 
-        if(enemyCount == maxMut)
+        if(enemyCount >= maxMut)
         {
             maxMet = true;
         }
@@ -66,7 +67,8 @@ public class enemySpawner : MonoBehaviour
             yield return new WaitForSeconds(spawnTime);
             Instantiate(enemy, transform.position, transform.rotation);
             curMut += 1;
-            if (curMut < maxMut)
+            enemyCount += 1;
+            if (enemyCount < maxMut)
             {
                 StartCoroutine(Spawning());
             }

@@ -40,7 +40,7 @@ public class eBullet : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (col.transform.tag == "Player 1", "Player 2")
+        if (col.transform.tag == "Player 1" || col.transform.tag == "Player 2")
         {
             Destroy(gameObject);
         }
