@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class rangedEnemy : MonoBehaviour
 {
@@ -9,8 +10,12 @@ public class rangedEnemy : MonoBehaviour
     public float p1dist;
     public float p2dist;
     public float enemySpeed;
+    public float stopDist;
 
+    public Vector3 targetDest;
     public Vector3 target;
+
+    private NavMeshAgent agent;
 
     public GameObject player1;
     public GameObject player2;
@@ -19,6 +24,7 @@ public class rangedEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
         player1 = GameObject.FindGameObjectWithTag("Player 1");
         player2 = GameObject.FindGameObjectWithTag("Player 2");
         gunSpawn = GetComponentInChildren<eBulletSpawner>();
@@ -43,8 +49,9 @@ public class rangedEnemy : MonoBehaviour
             target = player1.transform.position;
         }
 
-        transform.LookAt(target);
-        //transform.position += transform.forward * enemySpeed * Time.deltaTime;
+        stopDist = distBetween / 2;
+
+        agent.destination = target;
 
         distBetween = Vector3.Distance(gameObject.transform.position, target);
 
@@ -58,6 +65,8 @@ public class rangedEnemy : MonoBehaviour
             gunSpawn.canFire = false;
             Debug.Log("Can Fire is False");
         }
+
+        
     }
 
     

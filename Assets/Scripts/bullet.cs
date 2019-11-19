@@ -16,7 +16,7 @@ public class bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision ballCol)
     {
-        if (ballCol.other.tag == "Wall")
+        if (ballCol.other.tag == "Wall" || ballCol.other.tag == "Mutant" || ballCol.other.tag == "Player 1" || ballCol.other.tag == "Player 2")
         {
             Destroy(gameObject);
         }

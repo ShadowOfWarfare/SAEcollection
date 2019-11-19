@@ -15,11 +15,11 @@ public class enemyStats : MonoBehaviour
 
     void OnCollisionEnter(Collision bullCol)
     {
-        if (bullCol.transform.tag == "dpBullet")
+        if (bullCol.transform.tag == "Bullet")
         {
-            curHealth -= 1;
+            Destroy(gameObject);
         }
-        else if (bullCol.transform.tag == "sgBullet")
+        else if (bullCol.transform.tag == "Bullet")
         {
             curHealth -= 3;
         }

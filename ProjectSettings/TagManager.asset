@@ -8,6 +8,11 @@ TagManager:
   - Player 1
   - Player 2
   - pickUp
+  - Mutant
+  - Spawner
+  - Enemy Bullet
+  - dpBullet
+  - Bullet
   layers:
   - Default
   - TransparentFX

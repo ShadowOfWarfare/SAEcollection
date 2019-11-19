@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class enemyMove2 : MonoBehaviour
 {
@@ -8,7 +9,10 @@ public class enemyMove2 : MonoBehaviour
     public float p2dist;
     public float enemySpeed;
 
+    public Vector3 targetDest;
     public Vector3 target;
+
+    private NavMeshAgent agent;
 
     public GameObject player1;
     public GameObject player2;
@@ -16,6 +20,7 @@ public class enemyMove2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
         player1 = GameObject.FindGameObjectWithTag("Player 1");
         player2 = GameObject.FindGameObjectWithTag("Player 2");
     }
@@ -39,7 +44,6 @@ public class enemyMove2 : MonoBehaviour
             target = player1.transform.position;
         }
 
-        transform.LookAt(target);
-        transform.position += transform.forward * enemySpeed * Time.deltaTime;
+        agent.destination = target;
     }
 }

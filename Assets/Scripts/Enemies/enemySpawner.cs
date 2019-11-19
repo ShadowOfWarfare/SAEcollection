@@ -7,14 +7,17 @@ public class enemySpawner : MonoBehaviour
     public float spawnTime;
     public float curMut;
     public float maxMut;
+    public float waveRestart;
 
     public bool maxMet = false;
     //public bool spawnToggle = false;
 
-    public GameObject enemy;
+    public List<GameObject> enemy;
+    //public GameObject rangedEnemy;
 
     public int spawnCount;
     public int enemyCount;
+    public int waveCount;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +39,11 @@ public class enemySpawner : MonoBehaviour
         {
             maxMet = true;
         }
+
+        waveCount += 1;
+        maxMet = false;
+        StartCoroutine(Spawning());
+
     }
     #region Manual Spawning Code
     // Update is called once per frame
@@ -60,20 +68,23 @@ public class enemySpawner : MonoBehaviour
     //This is the coroutine started earlier
     IEnumerator Spawning()
     {
-        yield return new WaitForSeconds(spawnTime);
+        yield return new WaitForSeconds(waveRestart);
         if (maxMet == false)
         {
             //spawnToggle = false;
             yield return new WaitForSeconds(spawnTime);
-            Instantiate(enemy, transform.position, transform.rotation);
+            Instantiate(enemy[Random.Range(0,2)], transform.position, transform.rotation);
             curMut += 1;
             enemyCount += 1;
             if (enemyCount < maxMut)
             {
                 StartCoroutine(Spawning());
             }
+
+
         }
-
-
     }
+
+    
+
 }

@@ -18,7 +18,7 @@ public class eBullet : MonoBehaviour
         ebulletRB.velocity = transform.forward * ebulletSpeed;
 
         //This coroutine begins when the bullets spawn
-        StartCoroutine(DPBulletDespawn());
+        //StartCoroutine(DPBulletDespawn());
     }
 
     //This is the coroutine started earlier
@@ -41,6 +41,11 @@ public class eBullet : MonoBehaviour
         }
 
         if (col.transform.tag == "Player 1" || col.transform.tag == "Player 2")
+        {
+            Destroy(gameObject);
+        }
+
+        if (col.transform.tag == "Mutant" || col.transform.tag == "Enemy Bullet")
         {
             Destroy(gameObject);
         }
