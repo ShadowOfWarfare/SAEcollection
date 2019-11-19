@@ -40,9 +40,13 @@ public class enemySpawner : MonoBehaviour
             maxMet = true;
         }
 
-        waveCount += 1;
-        maxMet = false;
-        StartCoroutine(Spawning());
+        if (maxMet == true && enemyCount == 0)
+        {
+            waveCount += 1;
+            maxMet = false;
+            StartCoroutine(Spawning());
+        }
+       
 
     }
     #region Manual Spawning Code
