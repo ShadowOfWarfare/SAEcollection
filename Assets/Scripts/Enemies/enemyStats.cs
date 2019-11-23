@@ -8,22 +8,29 @@ public class enemyStats : MonoBehaviour
     public float curHealth;
     public float damage;
 
+    public playerStats pStats;
+
     // Start is called before the first frame update
     void Start()
     {
         curHealth = maxHealth;
+        pStats = GetComponent<playerStats>();
     }
 
     void OnCollisionEnter(Collision bullCol)
     {
         if (bullCol.transform.tag == "Bullet")
         {
-            Destroy(gameObject);
+            if (curHealth <= 0)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                curHealth -= pStats.attack;
+            }
         }
-        else if (bullCol.transform.tag == "Bullet")
-        {
-            curHealth -= 3;
-        }
+        
     }
 
     // Update is called once per frame
