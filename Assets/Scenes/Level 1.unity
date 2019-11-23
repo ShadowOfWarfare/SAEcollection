@@ -1184,6 +1184,16 @@ PrefabInstance:
       propertyPath: pStats
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5282332220870238803, guid: 03d14f89be0b5314caf73df4ad862013,
+        type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282332220870238803, guid: 03d14f89be0b5314caf73df4ad862013,
+        type: 3}
+      propertyPath: curHealth
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03d14f89be0b5314caf73df4ad862013, type: 3}
 --- !u!1 &645026824

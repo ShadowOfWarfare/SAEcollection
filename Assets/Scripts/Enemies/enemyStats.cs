@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class enemyStats : MonoBehaviour
 {
-    public float maxHealth = 10f;
+    public float maxHealth;
     public float curHealth;
     public float damage;
 
-    public playerStats pStats;
+   
 
     // Start is called before the first frame update
     void Start()
     {
         curHealth = maxHealth;
-        pStats = GetComponent<playerStats>();
+        //pStats = GetComponent<playerStats>();
     }
 
     void OnCollisionEnter(Collision bullCol)
     {
+       
         if (bullCol.transform.tag == "Bullet")
         {
             if (curHealth <= 0)
@@ -27,6 +28,7 @@ public class enemyStats : MonoBehaviour
             }
             else
             {
+                playerStats pStats = bullCol.collider.GetComponent<bullet>().pStats;
                 curHealth -= pStats.attack;
             }
         }

@@ -7,6 +7,12 @@ public class bullet : MonoBehaviour
     //code done by Jesse
     public float bulletSpeed;
     public float despawnTime;
+    public playerStats pStats;
+
+    void Start()
+    {
+        pStats = GetComponent<playerStats>(); 
+    }
     // Update is called once per frame
     void Update()
     {
