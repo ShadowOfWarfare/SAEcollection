@@ -249,6 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   curHealth: 0
+  damage: 2
 --- !u!1 &9118684104953360089
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,3 +298,4 @@ MonoBehaviour:
   canFire: 0
   firing: 0
   enemyRPM: 0.5
+  eStats: {fileID: 0}

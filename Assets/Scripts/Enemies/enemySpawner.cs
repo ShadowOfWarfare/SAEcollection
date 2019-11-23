@@ -47,7 +47,7 @@ public class enemySpawner : MonoBehaviour
             maxMet = false;
             StartCoroutine(Spawning());
         }
-        if(waveCount == 3)
+        if(waveCount == 1)
         {
             SceneManager.LoadScene("BossLevel");
         }

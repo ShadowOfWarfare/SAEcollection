@@ -10,9 +10,9 @@ TagManager:
   - pickUp
   - Mutant
   - Spawner
-  - Enemy Bullet
   - dpBullet
   - Bullet
+  - eBullet
   layers:
   - Default
   - TransparentFX

@@ -9,6 +9,8 @@ public class eBullet : MonoBehaviour
     private Rigidbody ebulletRB;
     public float eDespawnTime;
 
+    public enemyStats eStats;
+
     void Start()
     {
         //This part assigns the bullet's Rigidbody value to the bulletRB variable...
@@ -45,7 +47,7 @@ public class eBullet : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (col.transform.tag == "Mutant" || col.transform.tag == "Enemy Bullet")
+        if (col.transform.tag == "Mutant" || col.transform.tag == "Enemy Bullet" || col.transform.tag == "Bullet")
         {
             Destroy(gameObject);
         }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class playerStats : MonoBehaviour
 {
-    public Weapon W;
+    
     
     public float health;
     public float attack;
@@ -16,16 +16,32 @@ public class playerStats : MonoBehaviour
 
     
 
+    
+
 
     // Start is called before the first frame update
     void Start()
     {
-
+     
+       
     }
 
     // Update is called once per frame
-    void Update()
+    void OnCollisionEnter(Collision col)
     {
-        
+        if(col.transform.tag == "eBullet")
+        {
+            if(health < 0)
+            {
+                health = 0;
+            }
+            else 
+            {
+                Debug.Log("damage taken");
+                //dmgTaken = eStats.damage - armour;
+                enemyStats eStats = col.collider.GetComponent<eBullet>().eStats;
+                health -= eStats.damage;
+            }
+        }
     }
 }
