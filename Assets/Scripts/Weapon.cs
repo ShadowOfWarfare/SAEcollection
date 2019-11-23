@@ -21,7 +21,7 @@ public class Weapon : MonoBehaviour
     void Start()
     {
         GameObject S = Instantiate(Spawn[0],transform.position, transform.rotation);
-       
+        pStats = GetComponentInParent<playerStats>();
         S.transform.parent = transform;
     }
 
@@ -36,10 +36,10 @@ public class Weapon : MonoBehaviour
             //S.GetComponent<PickWeapon>().W = this;
             S.transform.parent = transform;
             n = 1;
-          
-            pStats.GetComponent<playerStats>().curAmmo = 50;
-            pStats.GetComponent<playerStats>().maxAmmo = 100;
-            pStats.GetComponent<playerStats>().attack = 20;
+
+            pStats.curAmmo = 50;
+            pStats.maxAmmo = 100;
+            pStats.attack = 20;
         }
         else if(n == 1)
         {
@@ -47,9 +47,9 @@ public class Weapon : MonoBehaviour
             //S.GetComponent<PickWeapon>().W = this;
             S.transform.parent = transform;
             n = 0;
-            pStats.GetComponent<playerStats>().curAmmo = 30;
-            pStats.GetComponent<playerStats>().maxAmmo = 100;
-            pStats.GetComponent<playerStats>().attack = 40;
+            pStats.curAmmo = 30;
+            pStats.maxAmmo = 100;
+            pStats.attack = 40;
         }
     }
     
