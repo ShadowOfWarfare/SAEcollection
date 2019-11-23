@@ -24,7 +24,7 @@ public class eBulletSpawner : MonoBehaviour
         firing = true;
         yield return new WaitForSeconds(enemyRPM);
         Instantiate(projectile, transform.position, transform.rotation);
-        Debug.Log("Enemy Fired!");
+        //Debug.Log("Enemy Fired!");
         canFire = true;
         firing = false;
 

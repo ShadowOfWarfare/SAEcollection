@@ -33,7 +33,7 @@ public class enemySpawner : MonoBehaviour
     {
         GameObject[] enemyList = GameObject.FindGameObjectsWithTag("Mutant");
         enemyCount = enemyList.Length;
-        Debug.Log(enemyCount);
+        //Debug.Log(enemyCount);
 
         if(enemyCount >= maxMut)
         {

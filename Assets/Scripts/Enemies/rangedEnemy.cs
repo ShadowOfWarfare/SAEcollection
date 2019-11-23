@@ -58,12 +58,12 @@ public class rangedEnemy : MonoBehaviour
         if (distBetween <= gunRange)
         {
             gunSpawn.canFire = true;
-            Debug.Log("Can Fire is True");
+            //Debug.Log("Can Fire is True");
         }
         else if (distBetween > gunRange)
         {
             gunSpawn.canFire = false;
-            Debug.Log("Can Fire is False");
+            //Debug.Log("Can Fire is False");
         }
 
         

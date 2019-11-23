@@ -11,6 +11,8 @@ public class Weapon : MonoBehaviour
     public Transform weaponTF;
 
     public int n = 0;
+
+    public playerStats pStats;
     
 
 
@@ -34,6 +36,10 @@ public class Weapon : MonoBehaviour
             //S.GetComponent<PickWeapon>().W = this;
             S.transform.parent = transform;
             n = 1;
+          
+            pStats.GetComponent<playerStats>().curAmmo = 50;
+            pStats.GetComponent<playerStats>().maxAmmo = 100;
+            pStats.GetComponent<playerStats>().attack = 20;
         }
         else if(n == 1)
         {
@@ -41,6 +47,9 @@ public class Weapon : MonoBehaviour
             //S.GetComponent<PickWeapon>().W = this;
             S.transform.parent = transform;
             n = 0;
+            pStats.GetComponent<playerStats>().curAmmo = 30;
+            pStats.GetComponent<playerStats>().maxAmmo = 100;
+            pStats.GetComponent<playerStats>().attack = 40;
         }
     }
     

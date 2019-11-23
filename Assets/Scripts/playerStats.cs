@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class playerStats : MonoBehaviour
 {
+    public Weapon W;
+    
     public float health;
     public float attack;
     public float armour;
@@ -12,11 +14,13 @@ public class playerStats : MonoBehaviour
 
     
 
+    
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
