@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class enemySpawner : MonoBehaviour
 {
@@ -45,6 +46,10 @@ public class enemySpawner : MonoBehaviour
             waveCount += 1;
             maxMet = false;
             StartCoroutine(Spawning());
+        }
+        if(waveCount == 3)
+        {
+            SceneManager.LoadScene("BossLevel");
         }
        
 

@@ -11,7 +11,7 @@ public class bullet : MonoBehaviour
 
     void Start()
     {
-        pStats = GetComponent<playerStats>(); 
+         
     }
     // Update is called once per frame
     void Update()

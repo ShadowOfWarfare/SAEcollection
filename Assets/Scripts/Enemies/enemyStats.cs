@@ -7,6 +7,7 @@ public class enemyStats : MonoBehaviour
     public float maxHealth;
     public float curHealth;
     public float damage;
+    
 
    
 

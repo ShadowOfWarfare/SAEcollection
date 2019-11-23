@@ -20,8 +20,8 @@ public class bulletSpawner : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire3"))
             {
-                Instantiate(bullet, transform.position, transform.rotation);
-                bullet.GetComponent<bullet>().pStats = pStats;
+                GameObject bulletObj =  Instantiate(bullet, transform.position, transform.rotation);
+                bulletObj.GetComponent<bullet>().pStats = pStats;
                 pStats.curAmmo -= 1;
             }
             Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
