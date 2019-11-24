@@ -7,6 +7,12 @@ public class enemyStats : MonoBehaviour
     public float maxHealth;
     public float curHealth;
     public float damage;
+    public float stickDamage;
+    public int attackTime;
+
+    public playerStats pStats;
+
+    public bool isTrigger;
     
 
    
@@ -15,6 +21,7 @@ public class enemyStats : MonoBehaviour
     void Start()
     {
         curHealth = maxHealth;
+        isTrigger = false;
         //pStats = GetComponent<playerStats>();
     }
 
@@ -36,6 +43,48 @@ public class enemyStats : MonoBehaviour
         
     }
 
+    void OnTriggerEnter(Collider col)
+    {
+        pStats = col.GetComponent<playerStats>();
+        
+        if (col.gameObject.tag == "Player 1" || col.gameObject.tag == "Player 2")
+        {
+            isTrigger = true;
+            if (pStats.health < 0)
+            {
+                pStats.health = 0;
+            }
+            else
+            {
+                Debug.Log("damage taken");
+                pStats.health -= stickDamage;
+            }
+            
+        }
+    }
+
+
+    /*IEnumerator melee()
+    {
+       
+        if (isTrigger == true && pStats.health > 0)
+        {
+            
+            Debug.Log("damage taken");
+            pStats.health -= stickDamage;
+            
+        }
+        yield return new WaitForSeconds(attackTime);
+    }*/
+
+    private void OnTriggerExit(Collider col)
+    {
+        if (col.gameObject.tag == "Player 1" || col.gameObject.tag == "Player 2")
+        {
+            isTrigger = false;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -43,5 +92,6 @@ public class enemyStats : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        //StartCoroutine(melee());
     }
 }

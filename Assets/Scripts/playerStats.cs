@@ -12,6 +12,8 @@ public class playerStats : MonoBehaviour
     public int curAmmo;
     public int maxAmmo;
 
+    public int attacktime;
+
     
 
     
@@ -29,19 +31,23 @@ public class playerStats : MonoBehaviour
     // Update is called once per frame
     void OnCollisionEnter(Collision col)
     {
-        if(col.transform.tag == "eBullet")
+        if (col.transform.tag == "eBullet")
         {
-            if(health < 0)
+            if (health < 0)
             {
                 health = 0;
             }
-            else 
+            else
             {
                 Debug.Log("damage taken");
-                //dmgTaken = eStats.damage - armour;
                 enemyStats eStats = col.collider.GetComponent<eBullet>().eStats;
                 health -= eStats.damage;
             }
         }
     }
+
+    
+
+
+    
 }

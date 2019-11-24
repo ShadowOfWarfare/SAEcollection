@@ -186,8 +186,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
+  m_Radius: 1.06
+  m_Height: 2.41
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!114 &5282332220870238803
@@ -202,10 +202,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 370e32c70bf501d4ea622f7abcf6dc18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 100
   curHealth: 0
   damage: 0
+  stickDamage: 2
+  attackTime: 3
   pStats: {fileID: 0}
+  isTrigger: 0
 --- !u!114 &5023631607069605797
 MonoBehaviour:
   m_ObjectHideFlags: 0
