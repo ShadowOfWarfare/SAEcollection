@@ -62,21 +62,6 @@ public class enemyStats : MonoBehaviour
             
         }
     }
-
-
-    /*IEnumerator melee()
-    {
-       
-        if (isTrigger == true && pStats.health > 0)
-        {
-            
-            Debug.Log("damage taken");
-            pStats.health -= stickDamage;
-            
-        }
-        yield return new WaitForSeconds(attackTime);
-    }*/
-
     private void OnTriggerExit(Collider col)
     {
         if (col.gameObject.tag == "Player 1" || col.gameObject.tag == "Player 2")
@@ -84,6 +69,18 @@ public class enemyStats : MonoBehaviour
             isTrigger = false;
         }
     }
+    /*IEnumerator melee()
+{
+
+    if (isTrigger == true && pStats.health > 0)
+    {
+
+        Debug.Log("damage taken");
+        pStats.health -= stickDamage;
+
+    }
+    yield return new WaitForSeconds(attackTime);
+}*/
 
     // Update is called once per frame
     void Update()
