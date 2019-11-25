@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class BulletDmg : MonoBehaviour
 {
-    public playerStats pStats;
+    
     public enemyStats eStats;
     
     // Start is called before the first frame update
     void Start()
     {
+        eStats = GetComponentInParent<enemyStats>();
         
     }
 
     private void OnCollisionEnter(Collision col)
     {
-        playerStats pStats = col.collider.GetComponent<bullet>().pStats;
-        enemyStats eStats = col.collider.GetComponent<enemyStats>();
+
+        
         if (col.transform.tag == "Bullet")
         {
-            if(eStats.curHealth <= 0)
+            playerStats pStats = col.collider.gameObject.GetComponent<bullet>().pStats;
+            if (eStats.curHealth <= 0)
             {
                 Destroy(eStats.gameObject);
             }

@@ -125,9 +125,11 @@ MonoBehaviour:
   spawnTime: 0
   curMut: 0
   maxMut: 10
+  waveRestart: 0
   maxMet: 0
   enemy:
-  - {fileID: 8542692690282994356, guid: 03d14f89be0b5314caf73df4ad862013, type: 3}
+  - {fileID: 5616195496618492054, guid: c694ddf23b80fd046b0097d4463d6f0d, type: 3}
   - {fileID: 8093517346657975084, guid: 28b22b3173ff5d64bb2d8d2fc849073e, type: 3}
   spawnCount: 0
   enemyCount: 0
+  waveCount: 0

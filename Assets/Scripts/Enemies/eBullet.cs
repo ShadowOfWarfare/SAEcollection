@@ -47,7 +47,7 @@ public class eBullet : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (col.transform.tag == "Mutant" || col.transform.tag == "Enemy Bullet" || col.transform.tag == "Bullet")
+        if (col.transform.tag == "Mutant" || col.transform.tag == "Enemy Bullet" || col.transform.tag == "Bullet" || col.transform.tag == "RangedEnemy")
         {
             Destroy(gameObject);
         }
