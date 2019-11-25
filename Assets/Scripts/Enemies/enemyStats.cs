@@ -25,23 +25,7 @@ public class enemyStats : MonoBehaviour
         //pStats = GetComponent<playerStats>();
     }
 
-    void OnCollisionEnter(Collision bullCol)
-    {
-       
-        if (bullCol.transform.tag == "Bullet")
-        {
-            if (curHealth <= 0)
-            {
-                Destroy(gameObject);
-            }
-            else
-            {
-                playerStats pStats = bullCol.collider.GetComponent<bullet>().pStats;
-                curHealth -= pStats.attack;
-            }
-        }
-        
-    }
+    
 
     void OnTriggerEnter(Collider col)
     {
