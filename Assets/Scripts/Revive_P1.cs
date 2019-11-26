@@ -44,6 +44,7 @@ public class Revive_P1 : MonoBehaviour
         yield return new WaitForSeconds(reviveTimer);
         Debug.Log("revive player 1 successful");
         GameObject.FindGameObjectWithTag("Player 1").GetComponent<playerStats>().health = 50;
+        GameObject.FindGameObjectWithTag("Player 1").GetComponent<playerStats>().curAmmo = 50;
 
 
     }

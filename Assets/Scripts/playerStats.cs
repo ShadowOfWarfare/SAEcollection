@@ -29,6 +29,13 @@ public class playerStats : MonoBehaviour
     }
 
     // Update is called once per frame
+    void Update()
+    {
+       if(health <= 0)
+        {
+            curAmmo = 0;
+        }
+    }
     void OnCollisionEnter(Collision col)
     {
         if (col.transform.tag == "eBullet")
@@ -36,6 +43,7 @@ public class playerStats : MonoBehaviour
             if (health < 0)
             {
                 health = 0;
+                
             }
             else
             {
