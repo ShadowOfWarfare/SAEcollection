@@ -983,16 +983,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1102648265}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 370e32c70bf501d4ea622f7abcf6dc18, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ec9d7d5a3bcd0948a0ed2252c250bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 500
-  curHealth: 500
-  damage: 10
+  maxHealth: 0
+  curHealth: 0
+  damage: 0
   stickDamage: 0
   attackTime: 0
   pStats: {fileID: 0}
   isTrigger: 0
+  bb: {fileID: 0}
 --- !u!1 &1129686019 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7481444054623805104, guid: cc7d471ac753df342b3a5aa3faafdcd7,
@@ -1008,16 +1009,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1129686019}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 370e32c70bf501d4ea622f7abcf6dc18, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ec9d7d5a3bcd0948a0ed2252c250bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 500
-  curHealth: 500
-  damage: 10
+  maxHealth: 0
+  curHealth: 0
+  damage: 0
   stickDamage: 0
   attackTime: 0
   pStats: {fileID: 0}
   isTrigger: 0
+  bb: {fileID: 0}
 --- !u!1 &1193989648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1650,10 +1652,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1769316968}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0229ca96fed48bf4886a39fb9569a67c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4061c2cab73d61343aac07f630fe9775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   eStats: {fileID: 0}
+  health: 500
 --- !u!1 &1775969205
 GameObject:
   m_ObjectHideFlags: 0
