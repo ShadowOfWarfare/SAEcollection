@@ -199,7 +199,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0229ca96fed48bf4886a39fb9569a67c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pStats: {fileID: 0}
   eStats: {fileID: 0}
 --- !u!1 &8093517346657975084
 GameObject:
@@ -358,7 +357,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 50
   curHealth: 0
-  damage: 2
+  damage: 5
   stickDamage: 0.5
   attackTime: 0
   pStats: {fileID: 0}
@@ -410,5 +409,5 @@ MonoBehaviour:
     type: 3}
   canFire: 0
   firing: 0
-  enemyRPM: 0.5
+  enemyRPM: 0.85
   eStats: {fileID: 0}

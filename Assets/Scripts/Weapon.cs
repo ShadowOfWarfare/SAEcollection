@@ -23,38 +23,51 @@ public class Weapon : MonoBehaviour
         GameObject S = Instantiate(Spawn[0],transform.position, transform.rotation);
         pStats = GetComponentInParent<playerStats>();
         S.transform.parent = transform;
+        n = 0;
     }
 
     // Update is called once per frame
     public void spawnUpdate()
     {
         Destroy(transform.GetChild(0).gameObject);
-
-        if (n == 0)
+        n = 1;
+        if (n == 1)
         {
             GameObject S = Instantiate(Spawn[2], weaponTF.position, weaponTF.rotation);
             //S.GetComponent<PickWeapon>().W = this;
             S.transform.parent = transform;
-            n = 1;
+            n = 2;
 
-            pStats.curAmmo = 50;
-            pStats.maxAmmo = 100;
-            pStats.attack = 20;
+            pStats.curAmmo = 25;
+            pStats.maxAmmo = 25;
+            pStats.attack = 35;
         }
-        else if(n == 1)
+        else if(n == 2)
         {
             GameObject S = Instantiate(Spawn[1], weaponTF.position, weaponTF.rotation);
             //S.GetComponent<PickWeapon>().W = this;
             S.transform.parent = transform;
-            n = 0;
-            pStats.curAmmo = 30;
-            pStats.maxAmmo = 100;
-            pStats.attack = 40;
+            n = 1;
+            pStats.curAmmo = 15;
+            pStats.maxAmmo = 15;
+            pStats.attack = 50;
         }
     }
     
     void Update()
     {
-        
+        if(n == 1 || n == 2)
+        {
+            if(pStats.curAmmo <= 0)
+            {
+                Destroy(transform.GetChild(0).gameObject);
+                GameObject S = Instantiate(Spawn[0], weaponTF.position, weaponTF.rotation);
+                S.transform.parent = transform;
+                pStats.curAmmo = 50;
+                pStats.maxAmmo = 100;
+                pStats.attack = 20;
+                n = 0;
+            }
+        }
     }
 }

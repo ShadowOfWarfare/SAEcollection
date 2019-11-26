@@ -313,7 +313,7 @@ MonoBehaviour:
   maxHealth: 100
   curHealth: 0
   damage: 0
-  stickDamage: 2
+  stickDamage: 5
   attackTime: 3
   pStats: {fileID: 0}
   isTrigger: 0

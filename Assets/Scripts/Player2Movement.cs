@@ -32,10 +32,10 @@ public class Player2Movement : MonoBehaviour
             if (controller.isGrounded)
             {
                 //move along forward/back and left/right.
-                moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+                moveDir = new Vector3(Input.GetAxis("Horizontal P2"), 0, Input.GetAxis("Vertical P2"));
                 //moveDir = transform.TransformDirection(moveDir);  
                 moveDir *= speed;
-                if ((Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0))
+                if ((Input.GetAxis("Horizontal P2") != 0 || Input.GetAxis("Vertical P2") != 0))
                     transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(moveDir), 0.15f);
 
             }
