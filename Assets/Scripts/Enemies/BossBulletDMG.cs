@@ -7,6 +7,7 @@ public class BossBulletDMG : MonoBehaviour
     
     public enemyStats eStats;
     public float health;
+    public GameObject handL, handR;
 
     
     void Start()
@@ -25,6 +26,8 @@ public class BossBulletDMG : MonoBehaviour
             if (health <= 0)
             {
                 Destroy(gameObject);
+                Destroy(handR);
+                Destroy(handL);
             }
             else
             {

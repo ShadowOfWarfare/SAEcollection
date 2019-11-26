@@ -60,10 +60,6 @@ public class BossEnemy : MonoBehaviour
    
     void Update()
     {
-        if (bb.health <= 0)
-        {
-            Destroy(gameObject);
-        }
       
     }
 }
