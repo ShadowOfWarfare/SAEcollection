@@ -404,6 +404,7 @@ GameObject:
   - component: {fileID: 3187269562678512461}
   - component: {fileID: 3187269562678512466}
   - component: {fileID: 3187269562678512463}
+  - component: {fileID: 8518907155411984739}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Player 2
@@ -525,6 +526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  maxHealth: 100
   attack: 20
   armour: 2
   curAmmo: 50
@@ -547,6 +549,20 @@ MonoBehaviour:
   gravity: 20
   rotSpeed: 90
   pStats: {fileID: 0}
+--- !u!114 &8518907155411984739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3187269562678512467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dad83e1524ced9419c49e11a3f44bab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  p2Stats: {fileID: 0}
+  p2: 0
 --- !u!1 &3187269562854918454
 GameObject:
   m_ObjectHideFlags: 0

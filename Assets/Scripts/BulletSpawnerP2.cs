@@ -9,14 +9,14 @@ public class BulletSpawnerP2 : MonoBehaviour
 
     void Start()
     {
-        pStats = GetComponentInParent<playerStats>();
+        pStats = GameObject.FindGameObjectWithTag("Player 2").GetComponent<playerStats>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (pStats.curAmmo != 0)
+        if (pStats.curAmmo > 0)
         {
             if (Input.GetButtonDown("Fire3 P2"))
             {

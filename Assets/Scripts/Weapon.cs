@@ -23,14 +23,14 @@ public class Weapon : MonoBehaviour
         GameObject S = Instantiate(Spawn[0],transform.position, transform.rotation);
         pStats = GetComponentInParent<playerStats>();
         S.transform.parent = transform;
-        n = 0;
+        n = 1;
     }
 
     // Update is called once per frame
     public void spawnUpdate()
     {
         Destroy(transform.GetChild(0).gameObject);
-        n = 1;
+     
         if (n == 1)
         {
             GameObject S = Instantiate(Spawn[2], weaponTF.position, weaponTF.rotation);
@@ -66,7 +66,7 @@ public class Weapon : MonoBehaviour
                 pStats.curAmmo = 50;
                 pStats.maxAmmo = 100;
                 pStats.attack = 20;
-                n = 0;
+                n = Random.Range(1,3);
             }
         }
     }

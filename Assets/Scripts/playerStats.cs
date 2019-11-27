@@ -7,12 +7,17 @@ public class playerStats : MonoBehaviour
     
     
     public float health;
+    public float maxHealth;
+    //public float percentage;
     public float attack;
     public float armour;
     public int curAmmo;
     public int maxAmmo;
 
     public int attacktime;
+
+    public event System.Action<float> updateHealth;
+
 
     
 
@@ -35,6 +40,8 @@ public class playerStats : MonoBehaviour
         {
             curAmmo = 0;
         }
+        //percentage = health / maxHealth;
+        //updateHealth(percentage);
     }
     void OnCollisionEnter(Collision col)
     {
