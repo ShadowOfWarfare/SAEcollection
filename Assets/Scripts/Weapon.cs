@@ -23,20 +23,21 @@ public class Weapon : MonoBehaviour
         GameObject S = Instantiate(Spawn[0],transform.position, transform.rotation);
         pStats = GetComponentInParent<playerStats>();
         S.transform.parent = transform;
-        n = 1;
+       
     }
 
     // Update is called once per frame
     public void spawnUpdate()
     {
         Destroy(transform.GetChild(0).gameObject);
-     
+        n = Random.Range(1, 3);
+
         if (n == 1)
         {
             GameObject S = Instantiate(Spawn[2], weaponTF.position, weaponTF.rotation);
             //S.GetComponent<PickWeapon>().W = this;
             S.transform.parent = transform;
-            n = 2;
+            n = 0;
 
             pStats.curAmmo = 25;
             pStats.maxAmmo = 25;
@@ -47,7 +48,7 @@ public class Weapon : MonoBehaviour
             GameObject S = Instantiate(Spawn[1], weaponTF.position, weaponTF.rotation);
             //S.GetComponent<PickWeapon>().W = this;
             S.transform.parent = transform;
-            n = 1;
+            n = 0;
             pStats.curAmmo = 15;
             pStats.maxAmmo = 15;
             pStats.attack = 50;

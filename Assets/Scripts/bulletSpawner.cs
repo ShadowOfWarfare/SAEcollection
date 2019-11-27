@@ -16,7 +16,7 @@ public class bulletSpawner : MonoBehaviour
     void Update()
     {
 
-        if (pStats.curAmmo > 0)
+        if (pStats.curAmmo > 0 && pStats.health > 0)
         {
             if (Input.GetButtonDown("Fire3"))
             {
