@@ -57,7 +57,7 @@ public class Weapon : MonoBehaviour
     
     void Update()
     {
-        if(n == 1 || n == 2)
+        if(pStats.maxAmmo == 25 || pStats.maxAmmo == 15)
         {
             if(pStats.curAmmo <= 0)
             {
