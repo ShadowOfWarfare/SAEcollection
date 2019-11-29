@@ -35,7 +35,7 @@ public class Revive_P2 : MonoBehaviour
         //player exits the revive zone
         if (col.gameObject.tag == "Player 1")
         {
-            StartCoroutine(cancelP2Counter());
+            StopCoroutine(reviveP2Counter());
             reviving = false;
             Debug.Log("revive failed");
         }
@@ -51,12 +51,5 @@ public class Revive_P2 : MonoBehaviour
         GameObject.FindGameObjectWithTag("Player 2").GetComponent<playerStats>().health = 50;
         GameObject.FindGameObjectWithTag("Player 2").GetComponent<playerStats>().curAmmo = 50;
     }
-    IEnumerator cancelP2Counter()
-    {
-
-        yield return new WaitForSeconds(cancelTime);
-        Debug.Log("revive player 2 successful");
-        GameObject.FindGameObjectWithTag("Player 2").GetComponent<playerStats>().health = 0;
-        GameObject.FindGameObjectWithTag("Player 2").GetComponent<playerStats>().curAmmo = 0;
-    }
+    
 }
