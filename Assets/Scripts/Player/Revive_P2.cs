@@ -7,6 +7,7 @@ public class Revive_P2 : MonoBehaviour
     //code done by Rohith Maddali
     public bool reviving = false;
     public int reviveTimer;
+    public float cancelTime;
     int count = 0;
 
     public void OnTriggerEnter(Collider col)
@@ -30,10 +31,11 @@ public class Revive_P2 : MonoBehaviour
 
     public void OnTriggerExit(Collider col)
     {
+        reviving = false;
         //player exits the revive zone
         if (col.gameObject.tag == "Player 1")
         {
-            StopCoroutine(reviveP2Counter());
+            StartCoroutine(cancelP2Counter());
             reviving = false;
             Debug.Log("revive failed");
         }
@@ -48,7 +50,13 @@ public class Revive_P2 : MonoBehaviour
         Debug.Log("revive player 2 successful");
         GameObject.FindGameObjectWithTag("Player 2").GetComponent<playerStats>().health = 50;
         GameObject.FindGameObjectWithTag("Player 2").GetComponent<playerStats>().curAmmo = 50;
+    }
+    IEnumerator cancelP2Counter()
+    {
 
-
+        yield return new WaitForSeconds(cancelTime);
+        Debug.Log("revive player 2 successful");
+        GameObject.FindGameObjectWithTag("Player 2").GetComponent<playerStats>().health = 0;
+        GameObject.FindGameObjectWithTag("Player 2").GetComponent<playerStats>().curAmmo = 0;
     }
 }
