@@ -11,6 +11,7 @@ public class BossBulletDMG : MonoBehaviour
     public float maxHealth;
     public GameObject handL, handR;
     public float percentage;
+    public bool unlocked;
 
     public event System.Action<float> updateHealth;
 
@@ -39,6 +40,7 @@ public class BossBulletDMG : MonoBehaviour
                 Destroy(gameObject);
                 Destroy(handR);
                 Destroy(handL);
+                unlocked = true;
                 SceneManager.LoadScene("Menu");
             }
             else

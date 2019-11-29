@@ -16,6 +16,7 @@ TagManager:
   - RangedEnemy
   - Boss
   - Respawn2
+  - GG
   layers:
   - Default
   - TransparentFX
